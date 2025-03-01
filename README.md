@@ -5,7 +5,7 @@ A repo that contains small datasets for example code
 
 Both datasets are derived from the data made available at the [Open Source Asset Pricing](https://www.openassetpricing.com/) website. That data is based on the paper "Open Source Cross-Sectional Asset Pricing" by Chen and Zimmerman (2021),  published in Critical Finance Review. [Preprint version](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3604626) [Published version](http://dx.doi.org/10.1561/104.00000112)
 
-We construct a target variable "nextyr_ret" by moving the variable "mom12m" (12 month momementum, or the average return from month t-12 to t-1 inclusive) forward by 13 months, so that it now represents future returns from month t+1 to t+12 inclusive). (However, this means that the first year of return observations for each firm is lost.)
+We construct a target variable "nextyr_ret" by moving the variable "mom12m" (12 month momementum, or the average return from month t-12 to t-1 inclusive) forward by 13 months, so that it now represents future returns from month t+1 to t+12 inclusive. (However, this means that the first year of return observations for each firm is lost.)
 
 In order to obtain a more manageable dataset size, we retain only the last month in each year (December), only retain continuous predictors, only retain observations for which nextyr_ret are not missing and drop all predictors with less than 50% coverage in the data, and drop all observations before 1992. 
 
